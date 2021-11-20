@@ -9,7 +9,7 @@ class Usuario {
   constructor(email, senha) {
     this.email = email;
     this.senha = senha;
-    admin: false;
+    this.admin = false;
   }
   isAdmin() {
     const user = this.admin ? true : false;
@@ -30,7 +30,7 @@ console.log(User1.isAdmin());
 console.log(adm1.isAdmin());
 console.log('\n\n');
 
-// 2) A partir do seguinte vetgor, utilize o smétodos de array para resolver os exercícios
+// 2) A partir do seguinte vetor, utilize o smétodos de array para resolver os exercícios
 const usuarios = [
   { nome: 'Diego', idade: 23, empresa: 'RocketSeat' },
   { nome: 'Gabriel', idade: 15, empresa: 'RocketSeat' },
@@ -125,6 +125,7 @@ console.log(nomeEmpresa, cidade, estado);
 
 //4.2 -> desestruture nos parãmetros da função para buscar o nome e a idade do usuário
 function mostrarInfo(usuario) {
-  return `${usuario.nome} tem ${usuario.idade} anos.`;
+  const { nome, idade } = usuario;
+  return `${nome} tem ${idade} anos.`;
 }
 console.log(mostrarInfo({ nome: 'Matheus', idade: 18 }));
