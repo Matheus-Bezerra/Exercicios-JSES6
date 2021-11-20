@@ -129,3 +129,38 @@ function mostrarInfo(usuario) {
   return `${nome} tem ${idade} anos.`;
 }
 console.log(mostrarInfo({ nome: 'Matheus', idade: 18 }));
+console.log('\n');
+
+/*
+5) Utilizando o operador de rest/spread (...) realize as seguintes operações:
+*/
+
+//5.1)Utilize rest, pois a partir do array: const arra = [1, 2, 3, 4, 5, 6], defina uma variável x que recebe a primeira posição do vetor e outra variável y que recebe todo restante dos dados
+const arra = [1, 2, 3, 4, 5, 6];
+const x = arra.shift();
+console.log(x);
+const y = [...arra];
+console.log(y);
+
+//5.2) Utilize Spread, pois a partir do objeto e utilizando o operador spread: Crie uma variável dadoPessoa2 que contenha todos os dados do dadoPessoa porém com nome Gabriel. Crie uma variável dadoPessoa3 que contenha todos os dados do usuário porém com cidade Lontras.
+const dadoPessoa = {
+  nome: 'Diego',
+  idade: 23,
+  endereco: {
+    cidade: 'Rio do Sul',
+    uf: 'SC',
+    pais: 'Brasil',
+  },
+};
+
+const dadoPessoa2 = { ...dadoPessoa };
+dadoPessoa2.nome = 'Gabriel';
+console.log(dadoPessoa2);
+const dadoPessoa3 = { ...dadoPessoa };
+dadoPessoa3.endereco.cidade = 'Lonntras';
+console.log(dadoPessoa3);
+console.log('\n\n');
+
+/*
+
+*/
