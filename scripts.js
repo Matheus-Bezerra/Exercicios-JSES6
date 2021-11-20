@@ -168,3 +168,26 @@ const pessoa = 'Diego';
 const idadePessoa = 23;
 console.log('O usuário ' + pessoa + ' possui ' + idadePessoa + ' anos');
 console.log(`O usuário ${pessoa} possui ${idadePessoa} anos`);
+console.log('\n\n');
+
+/*
+7) Utilize a sintaxe curta de objetos (Object Short Syntax) no seguinte objeto:
+*/
+const usuarioPessoa = 'Diego';
+const idadeUsuario = 23;
+
+const dadosUsuario = {
+  usuarioPessoa: usuarioPessoa,
+  idadeUsuario: idadeUsuario,
+  cidade: 'Rio do Sul',
+};
+
+// Objeto na sintaxe curta do ES6:
+const dadosUsuario2 = {
+  usuarioPessoa,
+  idadeUsuario,
+  cidade,
+};
+
+console.log(dadosUsuario2);
+/*=========FIM========= */
