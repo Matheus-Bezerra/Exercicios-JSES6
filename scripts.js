@@ -162,5 +162,9 @@ console.log(dadoPessoa3);
 console.log('\n\n');
 
 /*
-
+6) Converta o seguinte trecho de código utilizando Template Literals:
 */
+const pessoa = 'Diego';
+const idadePessoa = 23;
+console.log('O usuário ' + pessoa + ' possui ' + idadePessoa + ' anos');
+console.log(`O usuário ${pessoa} possui ${idadePessoa} anos`);
