@@ -1,6 +1,4 @@
-/*
-1 Transforme os seguintes trechos de códigos utilizando async/await e jeitos mais simplificados:
-*/
+// 1 Transforme os seguintes trechos de códigos utilizando async/await e jeitos mais simplificados:
 
 /* 1.1 transforme a função a seguir:
 const buscaUsuario = (usuario) => {
@@ -16,11 +14,11 @@ const buscaUsuario = (usuario) => {
 buscaUsuario('diego3g');
 */
 
-async function buscaUsuario(user) {
+const buscaUsuario = async (user) => {
   const github = await fetch(`https://api.github.com/users/${user}`);
   const usuario = await github.json();
   console.log(usuario);
-}
+};
 
 buscaUsuario('Matheus-Bezerra');
 
@@ -40,16 +38,10 @@ function umPorSegundo() {
 umPorSegundo();
 */
 
-async function umPorSegundo() {
-  const primeiroSegundos = setTimeout(() => {
-    console.log('1s');
-    const segundoSegundos = setTimeout(() => {
-      console.log('2s');
-      setTimeout(() => {
-        console.log('3s');
-      }, 1000);
-    }, 1000);
-  }, 1000);
-}
-
+const delay = () => new Promise((resolve) => setTimeout(resolve, 1000));
+const umPorSegundo = async () => {
+  await delay(console.log('1s'));
+  await delay(console.log('2s'));
+  await delay(console.log('3s'));
+};
 umPorSegundo();
